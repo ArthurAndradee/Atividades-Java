@@ -12,6 +12,7 @@ public class App {
         for (int i = 0; i < A.length; i++) {
             System.out.println("Insira " + (i+1) + "o valor do array A");
             A[i] = read.nextInt();
+            
             System.out.println("Insira " + (i+1) + "o valor do array B"); 
             B[i] = read.nextInt();
 
