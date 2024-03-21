@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class App {
@@ -21,7 +20,10 @@ public class App {
             }
         }
 
-        
-        System.out.println("Resultado: " + Arrays.toString(C));
+        for (int i = 0; i < C.length; i++) {
+            if (C[i] != 0) {
+                System.out.println("Resultado em comum entre A e B: " + C[i]);
+            }
+        }
     }
 }
