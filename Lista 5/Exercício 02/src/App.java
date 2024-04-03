@@ -24,16 +24,6 @@ public class App {
             }
             System.out.println();
         }
-
-        //Realizando soma dos valores
-        int sum = 0;
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                sum += matrix[i][j];
-            }
-        }
-        System.out.println("A soma dos elementos da matriz é: " + sum);
-    
     
         int[] vectorC = new int[matrix.length];
 
