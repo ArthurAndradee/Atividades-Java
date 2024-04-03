@@ -1,20 +1,54 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.Random;
 
 public class App {
-    public static void main(String[] args) {
-        Scanner read = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+        int rows = 10;
+        int cols = 10;
+        int avg = 0;
 
-        int[] array = new int[10];
+        int[][] M = generateRandomMatrix(rows, cols);
+        
+        findDiagonalAverage(avg, M);
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.println("Insira próximo valor no array");
+        printMatrix(M);
+    }
 
-            array[i] = read.nextInt();
+    public static int [][] generateRandomMatrix(int rows, int cols) {
+
+        Random random = new Random();
+
+        int[][] M = new int[rows][cols];      
+
+        for (int i = 0 ; i < rows ; i++) {
+            for (int j = 0; j < cols ; j++) {
+                M[i][j] = random.nextInt(100);
+            }
         }
 
-        Arrays.sort(array);
+        return M;
+    }
 
-        System.out.println("Resultado do primeiro array: " + Arrays.toString(array));
+    public static void findDiagonalAverage(int avg, int[][] M) {
+        for (int i = 0; i < M.length; i++) {
+            for (int j = 0; j < M[i].length; j++) {
+                if (i == j) {
+                    avg += M[i][j];
+                }
+            }
+        }
+
+        avg = avg / M.length;
+
+        System.out.println("Média da diagomnal principal: ");
+        System.out.println(avg);
+    }
+
+    public static void printMatrix(int[][] M) {
+        for (int i = 0; i < M.length; i++) {
+            for (int j = 0; j < M[i].length; j++) {
+                System.out.print(M[i][j] + "\t");
+            }
+            System.out.println();
+        }
     }
 }

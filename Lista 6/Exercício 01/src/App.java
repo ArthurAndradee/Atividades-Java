@@ -1,10 +1,20 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        int[] array = new int[10];
+        Scanner read = new Scanner(System.in);
 
-        for (int i = 0; i < array.length; i++) {
-            array[i] = 30;
-            System.out.println(array[i]);
+        System.out.println("Insira um número");
+        int number = read.nextInt();
+        
+        isNumberBiggerThan100(number);
+    }
+
+    public static void isNumberBiggerThan100(int number) {
+        if (number > 100) {
+            System.out.println("Number is bigger than 100");
+        } else {
+            System.out.println("Number is not bigger than 100");
         }
     }
 }

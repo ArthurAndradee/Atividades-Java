@@ -1,14 +1,23 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        int[] array = new int[20];
+        Scanner read = new Scanner(System.in);
 
-        for (int i = 0; i < array.length; i++) {
+        System.out.println("Insira seu primeiro número: ");
+        int numero = read.nextInt();
 
-            if(i%2 == 0) {
-                array[i] = array[i];
-            }
-            
-            System.out.println(array[i]); 
+        System.out.println("Insira seu segundo número: ");
+        int numero2 = read.nextInt();
+
+        whichNumberIsBigger(numero, numero2);
+    }
+
+    public static void whichNumberIsBigger(int numero, int numero2) {
+        if (numero > numero2) {
+            System.out.println("Primeiro número é maior que o segundo");
+        } else {
+            System.out.println("Segundo número é maior que o primeiro");
         }
     }
 }
