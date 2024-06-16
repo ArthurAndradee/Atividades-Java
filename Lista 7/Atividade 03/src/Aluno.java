@@ -1,6 +1,38 @@
 public class Aluno {
     private int numeroDeMatricula;
     private String nomeDoAluno;
+
+    public int getNumeroDeMatricula() {
+        return this.numeroDeMatricula;
+    }
+
+    public void setNumeroDeMatricula(int numeroDeMatricula) {
+        this.numeroDeMatricula = numeroDeMatricula;
+    }
+
+    public String getNomeDoAluno() {
+        return this.nomeDoAluno;
+    }
+
+    public void setNomeDoAluno(String nomeDoAluno) {
+        this.nomeDoAluno = nomeDoAluno;
+    }
+
+    public double getPrimeiraNota() {
+        return this.primeiraNota;
+    }
+
+    public void setPrimeiraNota(double primeiraNota) {
+        this.primeiraNota = primeiraNota;
+    }
+
+    public double getSegundaNota() {
+        return this.segundaNota;
+    }
+
+    public void setSegundaNota(double segundaNota) {
+        this.segundaNota = segundaNota;
+    }
     private double primeiraNota;
     private double segundaNota;
 

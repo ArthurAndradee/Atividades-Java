@@ -19,5 +19,7 @@ public class App {
         Aluno aluno = new Aluno(matriculaDoAluno, nomeDoAluno, primeiraNota, segundaNota);
 
         aluno.alunoFoiAprovado();
+
+        read.close();
     }
 }
