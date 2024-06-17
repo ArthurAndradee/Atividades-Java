@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class TestaCD {
     public static void main(String[] args) throws Exception {
-        Scanner scanner = new Scanner(System.in);
+        Scanner read = new Scanner(System.in);
 
         System.out.print("Informe o número de músicas do CD: ");
-        int numeroDeMusicas = scanner.nextInt();
+        int numeroDeMusicas = read.nextInt();
 
         CD cd = new CD(numeroDeMusicas);
 
@@ -20,7 +20,7 @@ public class TestaCD {
             System.out.println("5 - Faixa Anterior");
             System.out.println("0 - Sair");
             System.out.print("Escolha uma opção: ");
-            comando = scanner.nextInt();
+            comando = read.nextInt();
 
             switch (comando) {
                 case 1:
@@ -47,6 +47,6 @@ public class TestaCD {
             System.out.println(cd.toString());;
         } while (comando != 0);
 
-        scanner.close();
+        read.close();
     }
 }
