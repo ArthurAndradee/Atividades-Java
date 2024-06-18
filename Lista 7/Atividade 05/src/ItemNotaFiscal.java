@@ -48,7 +48,7 @@ public class ItemNotaFiscal {
     }
 
     public double calcularValorDaICMS(double ICMS, double calcularValorTotalDosItens) {
-        return ICMS * calcularValorTotalDosItens;
+        return (ICMS * calcularValorTotalDosItens) / 100;
     }
 
     @Override
